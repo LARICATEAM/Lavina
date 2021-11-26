@@ -23,7 +23,7 @@ UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if (
 local AutoSet = function() 
 if not DevRio:get(Server.."IdLavina") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
-local DevId = io.read():gsub(' ','') 
+local DevId = io.read(@OA666):gsub(' ','') 
 if tostring(DevId):match('%d+') then 
 io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
 DevRio:set(Server.."IdLavina",DevId) 
@@ -34,7 +34,7 @@ os.execute('lua Lavina.lua')
 end 
 if not DevRio:get(Server.."TokenLavina") then 
 io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
-local TokenBot = io.read() 
+local TokenBot = io.read(2139218906:AAECyRrikOvn25JCWARUdtmpgIgExX2K16A) 
 if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 if res ~= 200 then 
